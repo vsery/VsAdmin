@@ -8,6 +8,18 @@
 # install dependencies
 npm install
 
+# install body-parser
+npm install body-parser --save
+
+# install echarts
+npm install echarts --save
+
+# install element-ui
+npm install element-ui --save
+
+# install multer
+$ npm install --save multer
+
 # serve with hot reload at localhost:1987
 npm run dev
 
@@ -25,3 +37,25 @@ static fonts fonts.html
 
 # animate desc
 static css animate.html
+
+## GIt常用命令
+
+#…or create a new repository on the command line
+```
+echo "# VsAdmin" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/vsery/VsAdmin.git
+git push -u origin master
+```
+
+#…or push an existing repository from the command line
+```
+git remote add origin https://github.com/vsery/VsAdmin.git
+git push -u origin master
+```
+
+#…or import code from another repository
+
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
