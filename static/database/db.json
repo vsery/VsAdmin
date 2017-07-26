@@ -1,0 +1,103 @@
+{
+    "administrator": {
+        "token": "rN2}eR9^sE2@fI1@wD1@mL8>pD1?fYcB5@lN1^hF5(rC1%qC4$jF1@iI1~bJ",
+        "type": "administrator",
+        "name": "Administrator",
+        "password": "QWE!@#zxcAdministrator",
+        "mobile": "13957548576",
+        "avatar": "static/images/header/header (14).jpg",
+        "avatarID": "4138",
+        "nickname": "超级Boss---胡锦涛"
+    },
+    "business": {
+        "token": "gG3%eB1*gP5#bC2`kB1$kE1]eH1,tBsB2$nF5)tD1^bN2&oC1@gF3|kK7|cB",
+        "type": "business",
+        "name": "Business",
+        "password": "~!@#$%^&*()ASDFGHJKL",
+        "mobile": "13557412855",
+        "avatar": "static/images/header/header (21).jpg",
+        "avatarID": "4139",
+        "nickname": "腾讯Boss---马化腾"
+    },
+    "anchor": {
+        "token": "bB1$bC1$sG1?cV5^uO6`bF1*dE2@gJbM2@nR1&dI4(dJ1)sB6_fP3*jS1`qD",
+        "type": "anchor",
+        "name": "Anchor",
+        "password": "money271666573@qq.com",
+        "mobile": "13841383838",
+        "avatar": "static/images/header/header (16).jpg",
+        "avatarID": "4140",
+        "nickname": "凌晨主播---马晓光"
+    },
+    "systemMenu": [{
+        "name": "user",
+        "text": "个人信息",
+        "path": "/system/user",
+        "icon": "user"
+    }, {
+        "name": "wechat",
+        "text": "微信设置",
+        "path": "/system/wechat",
+        "icon": "wechat"
+    }, {
+        "name": "system",
+        "text": "系统设置",
+        "path": "/system/admin",
+        "icon": "system"
+    }, {
+        "name": "goout",
+        "text": "退出",
+        "path": "/",
+        "icon": "goout"
+    }],
+    "menu": [{
+        "name": "index",
+        "text": "首页",
+        "path": "/",
+        "icon": "windows"
+    }, {
+        "name": "bold",
+        "text": "博客",
+        "path": "/bold/bolds",
+        "icon": "pied-piper"
+    }, {
+        "name": "project",
+        "text": "项目",
+        "path": "/project/projects",
+        "icon": "github"
+    }, {
+        "name": "desgin",
+        "text": "设计",
+        "path": "/desgin/desgins",
+        "icon": "drupal"
+    }, {
+        "name": "music",
+        "text": "音乐",
+        "path": "/music/musics",
+        "icon": "music"
+    }, {
+        "name": "video",
+        "text": "视频",
+        "path": "/video/videos",
+        "icon": "film"
+    }, {
+        "name": "books",
+        "text": "书籍",
+        "path": "/book/books",
+        "icon": "paste"
+    }, {
+        "name": "finance",
+        "text": "财务",
+        "path": "/finance/finances",
+        "icon": "pie-chart"
+    }, {
+        "name": "wechat",
+        "text": "微信",
+        "path": "/wechat/wechats",
+        "icon": "wechat"
+    }],
+    "error": {
+        "static": "200",
+        "error": "error"
+    }
+}
