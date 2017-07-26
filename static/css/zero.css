@@ -405,7 +405,7 @@ textarea:hover,
 .boldLists .time { float: right; }
 .boldLists .thumbnail,
 .boldLists .desc { display: inline-block; text-align: left; }
-.boldLists .thumbnail { width: 14.5%; }
+.boldLists .thumbnail { width: 14.4%; }
 .boldLists .thumbnail img { box-sizing: border-box; -webkit-transition: all .5s; -o-transition: all .5s; transition: all .5s; filter: grayscale(100%); }
 .boldLists .desc { width: 83.5%; margin-left: 1%; padding: 12px 6px 0px; }
 .boldLists .desc li { box-sizing: border-box; padding-right: 8em; }

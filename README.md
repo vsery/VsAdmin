@@ -1,6 +1,7 @@
-# admin
+# VsAdmin
 
-> V_Admin
+> VsAdmin
+> 这只是我写给自己的一个可以博客!用于练手的, 如果喜欢请 Star. 写的好辛苦,请不要 Fork.
 
 ## Build Setup
 
@@ -31,6 +32,14 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+# 效果如下图
+
+![image](https://github.com/vsery/VsAdmin/raw/master/static/login.png)
+
+![image](https://github.com/vsery/VsAdmin/raw/master/static/bold.png)
+
+![image](https://github.com/vsery/VsAdmin/raw/master/static/project.png)
 
 # icon desc
 static fonts fonts.html
