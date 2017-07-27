@@ -3,7 +3,6 @@
 > VsAdmin
 > 这只是我写给自己的一个可以博客!用于练手的, 如果喜欢请 Star. 写的好辛苦,请不要 Fork.
 
-Creating a new branch is quick.
 ## 灵感
 > 首先自我介绍下吧，我是一个Web前端程序员，一个刚刚干了两年左右的小菜鸟。
  
