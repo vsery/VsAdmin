@@ -58,7 +58,7 @@ export default {
                 path: '',
                 text: '首页'
             }],
-            minMenuBox: true,
+            minMenuBox: false,
             sys: {}
         }
     },

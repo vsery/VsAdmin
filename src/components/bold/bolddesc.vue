@@ -3,7 +3,7 @@
     <breadcrumb-view :breadcrumb="page"></breadcrumb-view>
     <el-form ref="form" class="bold-box" :model="bold" label-width="80px" v-if="edit">
       <el-form-item label="缩略图">
-        <upImage-view v-on:onImageUrl="getImgUrl" :imgParam="imgParam" :dialogImageUrl="bold.thumbnail"></upImage-view>
+        <upFile-view v-on:onImageUrl="getImgUrl" :imgParam="imgParam" :dialogImageUrl="bold.thumbnail"></upFile-view>
       </el-form-item>
       <el-form-item label="活动名称">
         <el-input v-model="bold.title" autofocus></el-input>
@@ -56,7 +56,7 @@
 </template>
 <script>
 import breadcrumb from '@/components/tool/breadcrumb' // 面包屑
-import upImage from '@/components/tool/upImage' // 上传图片组件
+import upFile from '@/components/tool/upFile' // 上传图片组件
 import editorBox from '@/components/tool/editor' // editor组件
 export default {
   name: 'bold',
@@ -236,7 +236,7 @@ export default {
 
   components: {
     "breadcrumb-view": breadcrumb,
-    "upImage-view": upImage,
+    "upFile-view": upFile,
     'editorBox-view': editorBox
   }
 }

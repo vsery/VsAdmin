@@ -13,6 +13,7 @@ import '@/../static/css/animate.css'
 import '@/../static/utf8-php/ueditor.config.js'
 import '@/../static/utf8-php/ueditor.all.min.js'
 import '@/../static/utf8-php/themes/default/css/ueditor.min.css'
+
 Vue.use(ElementUI)
 
 import axios from 'axios'

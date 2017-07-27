@@ -62,7 +62,7 @@
               <el-button @click="signup=false" class="el-button-default">取消</el-button>
             </el-form-item>
             <el-form-item label="头像" v-if="step == 2">
-              <upImage-view v-on:onImageUrl="getImgUrl" :imgParam="imgParam" :dialogImageUrl="singupForm.avatar"></upImage-view>
+              <upFile-view v-on:onImageUrl="getImgUrl" :imgParam="imgParam" :dialogImageUrl="singupForm.avatar"></upFile-view>
               <!-- <el-upload name="image" enctype="multipart/form-data" class="el-upload el-upload--picture-card" action="api/upImage" :show-file-list="false" :on-success="handleAvatarSuccess" :before-upload="beforeAvatarUpload">
                                 <img v-if="singupForm.avatar" :src="singupForm.avatar" class="avatar">
                                 <i v-else class="el-icon-plus avatar-uploader-icon"></i>
@@ -95,7 +95,7 @@
 </template>
 <script>
 import layout from '@/components/layout'
-import upImage from '@/components/tool/upImage' // 上传图片组件
+import upFile from '@/components/tool/upFile' // 上传图片组件
 export default {
   name: 'app',
   data() {
@@ -142,7 +142,7 @@ export default {
   },
   components: {
     'layout-view': layout,
-    "upImage-view": upImage
+    "upFile-view": upFile
   },
   mounted() {
     this.setHeader();
