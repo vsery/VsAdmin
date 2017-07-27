@@ -1,12 +1,8 @@
 ## VsAdmin
 
-> VsAdmin
-> 这只是我写给自己的一个可以博客!用于练手的, 如果喜欢请 Star. 写的好辛苦,请不要 Fork.
+# 灵感
 
-## 灵感
-> 首先自我介绍下吧，我是一个Web前端程序员，一个刚刚干了两年左右的小菜鸟。
- 
->  采用 Vue + node + echarts + element-ui + axios + body-parser + multer + vue-router + ueditor ...技术来实现的. 后台部分,暂时采用JSON, 并没有链接数据库.   中间穿插了自己写的几个小插件. 如时钟, 音乐播放器....
+> 首先自我介绍下吧，我是一个Web前端程序员，一个刚刚干了几年左右的小菜鸟。这只是我写给自己的一个可以博客!用于练手的, 如果喜欢请 Star. 写的好辛苦,请不要 Fork.  采用 Vue + node + echarts + element-ui + axios + body-parser + multer + vue-router + ueditor ...技术来实现的. 后台部分,暂时采用JSON, 并没有链接数据库.   中间穿插了自己写的几个小插件. 如时钟, 音乐播放器....
 
 ## Build Setup
 
@@ -73,8 +69,7 @@ Node.js body parsing middleware.
 Parse incoming request bodies in a middleware before your handlers, available under the req.body property. checkout the [guide](https://www.npmjs.com/package/body-parserg)
 
 ## GIt常用命令
-# …or create a new repository on the command line
-
+…or create a new repository on the command line
 ```
 echo "# VsAdmin" >> README.md
 git init
@@ -84,11 +79,11 @@ git remote add origin https://github.com/vsery/VsAdmin.git
 git push -u origin master
 ```
 
-# …or push an existing repository from the command line
+…or push an existing repository from the command line
 ```
 git remote add origin https://github.com/vsery/VsAdmin.git
 git push -u origin master
 ```
 
-# …or import code from another repository
+…or import code from another repository
 You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
