@@ -3,9 +3,7 @@
 > VsAdmin
 > 这只是我写给自己的一个可以博客!用于练手的, 如果喜欢请 Star. 写的好辛苦,请不要 Fork.
  
->  采用 Vue + node + echarts + element-ui + axios + body-parser + multer + vue-router + ueditor ...技术来实现的. 后台部分,暂时采用JSON, 并没有链接数据库. 
-
->  中间穿插了自己写的几个小插件. 如时钟, 音乐播放器....
+>  采用 Vue + node + echarts + element-ui + axios + body-parser + multer + vue-router + ueditor ...技术来实现的. 后台部分,暂时采用JSON, 并没有链接数据库.   中间穿插了自己写的几个小插件. 如时钟, 音乐播放器....
 
 ## Build Setup
 
