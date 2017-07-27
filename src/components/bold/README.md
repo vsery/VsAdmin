@@ -2,14 +2,14 @@
 
 # HTML: [DOM结构]
 ```
-    <breadcrumb-view :breadcrumb="page"></breadcrumb-view>
-    <!-- 面包屑导航 -->
-    ....
-    <selectForm-view :user="user" :addUrl="'/bold/bolddesc'" v-on:onSelectForm="getSelectItem"></selectForm-view>
-    <!-- 搜素表单 -->
-    ....
-    <pagination-view ref="ap" v-on:cbData="getItem" :dataUrl="baseUrl + 'bold'" :searchForm="searchForm" :user="user"></pagination-view>
-    <!-- 分页 -->
+<breadcrumb-view :breadcrumb="page"></breadcrumb-view>
+<!-- 面包屑导航 -->
+....
+<selectForm-view :user="user" :addUrl="'/bold/bolddesc'" v-on:onSelectForm="getSelectItem"></selectForm-view>
+<!-- 搜素表单 -->
+....
+<pagination-view ref="ap" v-on:cbData="getItem" :dataUrl="baseUrl + 'bold'" :searchForm="searchForm" :user="user"></pagination-view>
+<!-- 分页 -->
 ```
 
 # JavaScript: [引用文件]
@@ -44,11 +44,11 @@ data(){
 
 # HTML: [DOM结构]
 ```
-    <upFile-view v-on:onImageUrl="getImgUrl" :imgParam="imgParam" :dialogImageUrl="bold.thumbnail"></upFile-view>
-    <!-- 上传 -->
-    ....
-    <editorBox-view :value="bold.content" v-on:input="getEditor" v-on:ready="newEditor"></editorBox-view>
-    <!-- 编辑器 -->
+<upFile-view v-on:onImageUrl="getImgUrl" :imgParam="imgParam" :dialogImageUrl="bold.thumbnail"></upFile-view>
+<!-- 上传 -->
+....
+<editorBox-view :value="bold.content" v-on:input="getEditor" v-on:ready="newEditor"></editorBox-view>
+<!-- 编辑器 -->
 ```
 
 # JavaScript: [引用文件]P
