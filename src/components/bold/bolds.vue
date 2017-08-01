@@ -40,7 +40,7 @@
       </el-collapse-item>
     	<div class="prompt" v-if="bold.length==0">暂无数据</div>
     </el-collapse>
-    <pagination-view ref="ap" v-on:cbData="getItem" :dataUrl="baseUrl + 'bold'" :searchForm="searchForm" :user="user"></pagination-view>
+    <pagination-view ref="ap" v-on:cbData="getItem" :dataUrl="baseUrl + 'bold'" :searchForm="searchForm" :user="user" :action="'blod'"></pagination-view>
   </div>
 </template>
 <script>

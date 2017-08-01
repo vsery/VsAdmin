@@ -1,9 +1,9 @@
 <template>
   <div class="uploadImg">
-    <el-upload name="image" enctype="multipart/form-data" action="api/upFile?action=upimage" list-type="picture-card" :multiple="imgParam.multiple?'multiple':null" :on-success="handleAvatarSuccess" :on-preview="handlePictureCardPreview" :on-remove="handleRemove" v-if="!imgParam.header">
+    <el-upload name="file" enctype="multipart/form-data" action="api/upFile?action=uploadimage" list-type="picture-card" :multiple="imgParam.multiple?'multiple':null" :on-success="handleAvatarSuccess" :on-preview="handlePictureCardPreview" :on-remove="handleRemove" v-if="!imgParam.header">
       <i class="el-icon-plus"></i>
     </el-upload>
-    <el-upload name="image" enctype="multipart/form-data" class="el-upload el-upload--picture-card" action="api/upFile?action=upimage" :show-file-list="false" :on-success="handleAvatarSuccess" :before-upload="beforeAvatarUpload" v-else>
+    <el-upload name="file" enctype="multipart/form-data" class="el-upload el-upload--picture-card" action="api/upFile?action=uploadimage" :show-file-list="false" :on-success="handleAvatarSuccess" :before-upload="beforeAvatarUpload" v-else>
       <img v-if="dialogImageUrl" :src="dialogImageUrl" class="avatar">
       <i v-else class="el-icon-plus avatar-uploader-icon"></i>
     </el-upload>

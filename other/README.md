@@ -1,4 +1,0 @@
-
-
-# vsery.xmind
-

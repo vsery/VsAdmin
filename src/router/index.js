@@ -12,6 +12,9 @@ import bolddesc from '@/components/bold/bolddesc' // 博客列表
 import projects from '@/components/project/projects' // 项目列表
 import projectdesc from '@/components/project/projectdesc' // 项目详情
 
+import musics from '@/components/music/musics' // 项目详情
+import musicdesc from '@/components/music/musicdesc' // 项目详情
+
 vue.use(router)
 
 export default new router({
@@ -51,7 +54,15 @@ export default new router({
             path: '/project/projectdesc',
             name: '项目详情',
             component: projectdesc
+        }, {
+            path: '/music/musics',
+            name: '音乐列表',
+            component: musics
+        }, {
+            path: '/music/musicdesc',
+            name: '音乐详情',
+            component: musicdesc
         }
-    ],
-    linkActiveClass: ''
+    ]//,
+    // linkActiveClass: ''
 })

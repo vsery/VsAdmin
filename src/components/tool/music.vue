@@ -134,7 +134,7 @@ export default {
                 params: params
             }).then(res => {
                 var resData = res.data;
-                this.musicList = resData;
+                this.musicList = resData.data;
                 this.audio = document.getElementById('audioMusic');
                 this.music.type = this.type[0];
                 this.musicRandom();
