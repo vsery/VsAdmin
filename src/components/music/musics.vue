@@ -4,14 +4,17 @@
         <!-- <selectForm-view :user="user" :addUrl="'/music/musics'" v-on:onSelectForm="getSelectItem"></selectForm-view> -->
         <el-button type="text" @click="dialogVisible = true">上传音乐</el-button>
         <el-row class="musciLists">
-            <!-- <el-card v-for="(s, index) in musics" :key='s.id'> -->
-                    <ul class="musicList">
-                        <li v-for="m in musics">{{m.title}}</li>
-                    </ul>
-                    <div class="prompt" v-if="musics.length==0">暂无数据</div>
+            <!-- <el-card v-for="(m, index) in musics" :key='m.id'> -->
+                <ul class="musicList">
+                    <li v-for="m in musics">
+                    {{m.title}}
+                    </li>
+                </ul>
+                <div class="prompt" v-if="musics.length==0">暂无数据</div>
             <!-- </el-card> -->
         </el-row>
         <pagination-view ref="ap" v-on:cbData="getItem" :dataUrl="baseUrl + 'music'" :searchForm="searchForm" :user="user" :action="'music'"></pagination-view>
+        
         <el-dialog title="提示" :visible.sync="dialogVisible" size="tiny" :before-close="handleClose">
             <div class="">
                 <el-upload class="upload-demo" action="api/upFile?action=uploadmusic" multiple :on-change="handleChange" :file-list="upFileList">

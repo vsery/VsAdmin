@@ -5,7 +5,7 @@
 	"password": "admin",
 	"passwordconfirm": "admin",
 	"mobile": "18075177451",
-	"avatar": "static\\images\\uploads\\image_haeder.jpg",
+	"avatar": "static\\images\\header\\image_haeder.jpg",
 	"avatarID": 2001,
 	"nickname": "Everyone is no.1"
 }]
