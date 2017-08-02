@@ -1,135 +1,133 @@
-{
-    "musicList": [{
-        "id": "1",
-        "title": "Beyond - 海阔天空",
-        "src": "static/music/Beyond - 海阔天空.mp3",
-        "cover": "static/images/cover/Beyond - 海阔天空.jpg",
-        "time": "5.26"
-    }, {
-        "id": "2",
-        "title": "Can You Feel My World - 王力宏",
-        "src": "static/music/Can You Feel My World - 王力宏.mp3",
-        "cover": "static/images/cover/Can You Feel My World - 王力宏.jpg",
-        "time": "3.09"
-    }, {
-        "id": "3",
-        "title": "I Said I Love You - Babyface",
-        "src": "static/music/I Said I Love You - Babyface.mp3",
-        "cover": "static/images/cover/I Said I Love You - Babyface.jpg",
-        "time": "3.09"
-    }, {
-        "id": "4",
-        "title": "多余的解释 - 许嵩",
-        "src": "static/music/多余的解释 - 许嵩.mp3",
-        "cover": "static/images/cover/多余的解释 - 许嵩.jpg",
-        "time": "3.09"
-    }, {
-        "id": "5",
-        "title": "灰色头像 - 许嵩",
-        "src": "static/music/灰色头像 - 许嵩.mp3",
-        "cover": "static/images/cover/灰色头像 - 许嵩.gif",
-        "time": "3.09"
-    }, {
-        "id": "6",
-        "title": "可爱女人 - 周杰伦",
-        "src": "static/music/可爱女人 - 周杰伦.mp3",
-        "cover": "static/images/cover/可爱女人 - 周杰伦.jpg",
-        "time": "3.09"
-    }, {
-        "id": "7",
-        "title": "漂移 - 周杰伦",
-        "src": "static/music/漂移 - 周杰伦.mp3",
-        "cover": "static/images/cover/漂移 - 周杰伦.jpg",
-        "time": "3.09"
-    }, {
-        "id": "8",
-        "title": "清明雨上 - 许嵩",
-        "src": "static/music/清明雨上 - 许嵩.mp3",
-        "cover": "static/images/cover/清明雨上 - 许嵩.jpg",
-        "time": "3.09"
-    }, {
-        "id": "9",
-        "title": "如果当时 - 许嵩",
-        "src": "static/music/如果当时 - 许嵩.mp3",
-        "cover": "static/images/cover/如果当时 - 许嵩.jpg",
-        "time": "3.09"
-    }, {
-        "id": "10",
-        "title": "唯一 - 王力宏",
-        "src": "static/music/唯一 - 王力宏.mp3",
-        "cover": "static/images/cover/唯一 - 王力宏.jpg",
-        "time": "3.09"
-    }, {
-        "id": "11",
-        "title": "张敬轩 - 吻得太逼真",
-        "src": "static/music/张敬轩 - 吻得太逼真.mp3",
-        "cover": "static/images/cover/张敬轩 - 吻得太逼真.jpg",
-        "time": "4:21"
-    }, {
-        "id": "12",
-        "title": "弦子 - 醉清风",
-        "src": "static/music/弦子 - 醉清风.mp3",
-        "cover": "static/images/cover/弦子 - 醉清风.jpg",
-        "time": "3.51"
-    }, {
-        "id": "13",
-        "title": "周华健 - 刀剑如梦",
-        "src": "static/music/周华健 - 刀剑如梦.mp3",
-        "cover": "static/images/cover/周华健 - 刀剑如梦.jpg",
-        "time": "3.09"
-    }, {
-        "id": "14",
-        "title": "Dream Chaser",
-        "src": "static/music/Dream Chaser.mp3",
-        "cover": "static/images/cover/Dream Chaser.jpg",
-        "time": "3.09"
-    }, {
-        "id": "15",
-        "title": "The War Is Over Now",
-        "src": "static/music/The War Is Over Now.mp3",
-        "cover": "static/images/cover/The War Is Over Now.jpg",
-        "time": "3.09"
-    }, {
-        "id": "16",
-        "title": "Follow Your Dream",
-        "src": "static/music/Follow Your Dream.mp3",
-        "cover": "static/images/cover/Follow Your Dream.jpg",
-        "time": "3.09"
-    }, {
-        "id": "17",
-        "title": "Now We Are Free",
-        "src": "static/music/Now We Are Free.mp3",
-        "cover": "static/images/cover/We Are One.jpg",
-        "time": "3.09"
-    }, {
-        "id": "18",
-        "title": "Raincoat",
-        "src": "static/music/Raincoat.mp3",
-        "cover": "static/images/cover/We Are One.jpg",
-        "time": "3.09"
-    }, {
-        "id": "19",
-        "title": "Ready For Love",
-        "src": "static/music/Ready For Love.mp3",
-        "cover": "static/images/cover/Ready For Love.jpg",
-        "time": "3.09"
-    }, {
-        "id": "20",
-        "title": "We Are One",
-        "src": "static/music/We Are One.mp3",
-        "cover": "static/images/cover/We Are One.jpg",
-        "time": "3.09"
-    }, {
-        "id": "21",
-        "title": "Work From Home",
-        "src": "static/music/Work From Home.mp3",
-        "cover": "static/images/cover/Work From Home.jpg",
-        "time": "3.09"
-    }, {
-        "id": "22",
-        "title": "Dream On",
-        "src": "static/music/Dream On.mp3",
-        "cover": "static/images/cover/We Are One.jpg",
-        "time": "3.09"
-    }]
-}
+[{
+    "id": "1",
+    "title": "Beyond - 海阔天空",
+    "src": "static/music/Beyond - 海阔天空.mp3",
+    "cover": "static/images/cover/Beyond - 海阔天空.jpg",
+    "time": "5.26"
+}, {
+    "id": "2",
+    "title": "Can You Feel My World - 王力宏",
+    "src": "static/music/Can You Feel My World - 王力宏.mp3",
+    "cover": "static/images/cover/Can You Feel My World - 王力宏.jpg",
+    "time": "3.09"
+}, {
+    "id": "3",
+    "title": "I Said I Love You - Babyface",
+    "src": "static/music/I Said I Love You - Babyface.mp3",
+    "cover": "static/images/cover/I Said I Love You - Babyface.jpg",
+    "time": "3.09"
+}, {
+    "id": "4",
+    "title": "多余的解释 - 许嵩",
+    "src": "static/music/多余的解释 - 许嵩.mp3",
+    "cover": "static/images/cover/多余的解释 - 许嵩.jpg",
+    "time": "3.09"
+}, {
+    "id": "5",
+    "title": "灰色头像 - 许嵩",
+    "src": "static/music/灰色头像 - 许嵩.mp3",
+    "cover": "static/images/cover/灰色头像 - 许嵩.gif",
+    "time": "3.09"
+}, {
+    "id": "6",
+    "title": "可爱女人 - 周杰伦",
+    "src": "static/music/可爱女人 - 周杰伦.mp3",
+    "cover": "static/images/cover/可爱女人 - 周杰伦.jpg",
+    "time": "3.09"
+}, {
+    "id": "7",
+    "title": "漂移 - 周杰伦",
+    "src": "static/music/漂移 - 周杰伦.mp3",
+    "cover": "static/images/cover/漂移 - 周杰伦.jpg",
+    "time": "3.09"
+}, {
+    "id": "8",
+    "title": "清明雨上 - 许嵩",
+    "src": "static/music/清明雨上 - 许嵩.mp3",
+    "cover": "static/images/cover/清明雨上 - 许嵩.jpg",
+    "time": "3.09"
+}, {
+    "id": "9",
+    "title": "如果当时 - 许嵩",
+    "src": "static/music/如果当时 - 许嵩.mp3",
+    "cover": "static/images/cover/如果当时 - 许嵩.jpg",
+    "time": "3.09"
+}, {
+    "id": "10",
+    "title": "唯一 - 王力宏",
+    "src": "static/music/唯一 - 王力宏.mp3",
+    "cover": "static/images/cover/唯一 - 王力宏.jpg",
+    "time": "3.09"
+}, {
+    "id": "11",
+    "title": "张敬轩 - 吻得太逼真",
+    "src": "static/music/张敬轩 - 吻得太逼真.mp3",
+    "cover": "static/images/cover/张敬轩 - 吻得太逼真.jpg",
+    "time": "4:21"
+}, {
+    "id": "12",
+    "title": "弦子 - 醉清风",
+    "src": "static/music/弦子 - 醉清风.mp3",
+    "cover": "static/images/cover/弦子 - 醉清风.jpg",
+    "time": "3.51"
+}, {
+    "id": "13",
+    "title": "周华健 - 刀剑如梦",
+    "src": "static/music/周华健 - 刀剑如梦.mp3",
+    "cover": "static/images/cover/周华健 - 刀剑如梦.jpg",
+    "time": "3.09"
+}, {
+    "id": "14",
+    "title": "Dream Chaser",
+    "src": "static/music/Dream Chaser.mp3",
+    "cover": "static/images/cover/Dream Chaser.jpg",
+    "time": "3.09"
+}, {
+    "id": "15",
+    "title": "The War Is Over Now",
+    "src": "static/music/The War Is Over Now.mp3",
+    "cover": "static/images/cover/The War Is Over Now.jpg",
+    "time": "3.09"
+}, {
+    "id": "16",
+    "title": "Follow Your Dream",
+    "src": "static/music/Follow Your Dream.mp3",
+    "cover": "static/images/cover/Follow Your Dream.jpg",
+    "time": "3.09"
+}, {
+    "id": "17",
+    "title": "Now We Are Free",
+    "src": "static/music/Now We Are Free.mp3",
+    "cover": "static/images/cover/We Are One.jpg",
+    "time": "3.09"
+}, {
+    "id": "18",
+    "title": "Raincoat",
+    "src": "static/music/Raincoat.mp3",
+    "cover": "static/images/cover/We Are One.jpg",
+    "time": "3.09"
+}, {
+    "id": "19",
+    "title": "Ready For Love",
+    "src": "static/music/Ready For Love.mp3",
+    "cover": "static/images/cover/Ready For Love.jpg",
+    "time": "3.09"
+}, {
+    "id": "20",
+    "title": "We Are One",
+    "src": "static/music/We Are One.mp3",
+    "cover": "static/images/cover/We Are One.jpg",
+    "time": "3.09"
+}, {
+    "id": "21",
+    "title": "Work From Home",
+    "src": "static/music/Work From Home.mp3",
+    "cover": "static/images/cover/Work From Home.jpg",
+    "time": "3.09"
+}, {
+    "id": "22",
+    "title": "Dream On",
+    "src": "static/music/Dream On.mp3",
+    "cover": "static/images/cover/We Are One.jpg",
+    "time": "3.09"
+}]

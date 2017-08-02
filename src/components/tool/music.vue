@@ -128,12 +128,14 @@ export default {
         getMusciList() {
             this.menuUrl = this.baseUrl + 'music';
             var params = {
-                'token': this.user.token
+                'token': this.user.token,
+                'player': true
             }
             this.$http.get(this.menuUrl, {
                 params: params
             }).then(res => {
                 var resData = res.data;
+                console.log(resData);
                 this.musicList = resData.data;
                 this.audio = document.getElementById('audioMusic');
                 this.music.type = this.type[0];

@@ -40,8 +40,8 @@ var articleTitle = require('../static/database/articleTitle.json'); // 文章标
 var articleTitle = articleTitle.articleTitle;
 var keyData = require('../static/database/key.json'); // 关键字, 检索列表数据
 var keyWord = keyData.keyWord;
-var musicData = require('../static/database/music.json'); // 音乐列表
-var music = musicData.musicList;
+// var musicData = require('../static/database/music.json'); // 音乐列表
+// var music = musicData.musicList;
 var mapChina = require('../static/database/china.json'); // 中国地图数据
 var mapWorld = require('../static/database/world.json'); // 世界地图数据
 var eChartsTheme = require('../static/database/eChartsTheme.json'); // eChartsTheme主题包
@@ -115,11 +115,26 @@ apiRoutes.get('/upFile', function(req, res) {
 /* 设置图像上传配置 */
 var storageUpFile = multer.diskStorage({
     destination: function(req, file, cb) {
-        cb(null, 'static/uploads/')
+        if (file.mimetype.indexOf('audio') >= 0) {
+            cb(null, 'static/uploads/audio')
+        } else if (file.mimetype.indexOf('image') >= 0) {
+            cb(null, 'static/uploads/image')
+        }
+        if (file.mimetype.indexOf('video') >= 0) {
+            cb(null, 'static/uploads/video')
+        }
     },
     filename: function(req, file, cb) {
         var fileFormat = (file.originalname).split(".");
-        cb(null, file.fieldname + '_' + Date.now() + "." + fileFormat[fileFormat.length - 1]);
+        var fileName = file.mimetype.split("/");
+        if (file.mimetype.indexOf('audio') >= 0) {
+            cb(null, file.originalname);
+        } else if (file.mimetype.indexOf('image') >= 0) {
+            cb(null, fileName[0] + '-' + Date.now() + "." + fileFormat[fileFormat.length - 1]);
+        }
+        if (file.mimetype.indexOf('video') >= 0) {
+            cb(null, fileName[0] + '-' + Date.now() + "." + fileFormat[fileFormat.length - 1]);
+        }
     }
 });
 var upload = multer({ storage: storageUpFile });
@@ -368,6 +383,9 @@ apiRoutes.get('/music', function(req, res) {
                 }
             }
         }
+        if (req.query.player) {
+            return res.json({ state: 'SUCCESS', data: tempData, total: tempData.length });
+        }
         for (var i = (req.query.page - 1) * req.query.size; i < req.query.page * req.query.size && i < newData.length; i++) {
             current.push(newData[i]);
         }
@@ -473,13 +491,13 @@ module.exports = {
 function openData(fd) {
     var data = fs.readFileSync(fd, "utf8"),
         tempData;
-    console.log(data.toString());
+    // console.log(data.toString());
     if (data.toString() == "[]" || data.toString() == null || data.toString() == "") {
         tempData = [];
     } else {
         tempData = JSON.parse(data.toString());
     }
-    console.log(tempData);
+    // console.log(tempData);
     return tempData;
 }
 
