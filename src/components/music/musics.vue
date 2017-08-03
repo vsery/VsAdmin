@@ -1,7 +1,6 @@
 <template>
     <div id="musics">
         <breadcrumb-view :breadcrumb="page"></breadcrumb-view>
-        <!-- <selectForm-view :user="user" :addUrl="'/music/musics'" v-on:onSelectForm="getSelectItem"></selectForm-view> -->
         <el-button type="text" @click="dialogVisible = true">上传音乐</el-button>
         <el-row class="musciLists">
             <el-card v-for="(m, index) in musics" :key='m.id'>
@@ -27,7 +26,6 @@
 </template>
 <script>
 import breadcrumb from '@/components/tool/breadcrumb' // 面包屑
-import selectForm from '@/components/form/selectArticleForm' // 表单/文章搜索
 import pagination from '@/components/tool/pagination' // 分页控件
 export default {
     name: 'musics',
@@ -50,16 +48,6 @@ export default {
         user: Object
     },
     methods: {
-        /* 获取搜素子控件,传回来的表单,再查询文章数据 */
-        getSelectItem(_form) {
-            this.searchForm = _form;
-
-            var that = this;
-            this.$nextTick(() => {
-                that.$refs.ap.getData(this.searchForm);
-            });
-            // this.getItem();
-        },
         /* 获取文章列表数据 */
         getItem(_data) {
             console.log(_data);
@@ -82,7 +70,6 @@ export default {
     },
     components: {
         "breadcrumb-view": breadcrumb,
-        "selectForm-view": selectForm,
         "pagination-view": pagination
     }
 }
