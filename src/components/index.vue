@@ -6,7 +6,7 @@
                 <el-card>
                     <!-- <img src="~examples/assets/images/hamburger.png" class="image"> -->
                     <div style="padding: 14px;">
-                        <span>好吃的汉堡</span>
+                        <span>皮肤选择</span>
                         <div class="bottom clearfix">
                             <time class="time">{{ currentDate }}</time>
                             <el-button type="text" class="button">操作按钮</el-button>

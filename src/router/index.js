@@ -30,8 +30,8 @@ export default new router({
 		component: wechatsetting
 	}, {
         path: '/page/pages',
-        name: '博文列表',
-        component: blogs
+        name: '页面列表',
+        component: page
     }, {
 		path: '/blog/blogs',
 		name: '博文列表',

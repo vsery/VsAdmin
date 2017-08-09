@@ -59,7 +59,7 @@
         "name": "page",
         "text": "页面",
         "path": "/page/pages",
-        "icon": "page"
+        "icon": "files-o"
     }, {
         "name": "blog",
         "text": "博客",
@@ -100,6 +100,16 @@
         "text": "微信",
         "path": "/wechat/wechats",
         "icon": "wechat"
+    }, {
+        "name": "link",
+        "text": "链接",
+        "path": "/link/links",
+        "icon": "link"
+    }, {
+        "name": "tool",
+        "text": "工具",
+        "path": "/tool/tools",
+        "icon": "tool"
     }],
     "error": {
         "static": "200",

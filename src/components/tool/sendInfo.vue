@@ -61,6 +61,7 @@ export default {
             this.$message.success('提交成功');
             this.$emit('subimtSendInfo', false);
             console.log(this.form);
+            parent.location='mailto:postmaster@vsery.com?subject='+this.form.title+'&body=' +this.form.content;
         },
         /* 清空表单 */
         onClear() {
