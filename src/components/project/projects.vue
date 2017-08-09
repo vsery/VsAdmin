@@ -1,5 +1,5 @@
 <template>
-    <div id="bold">
+    <div id="blog">
         <breadcrumb-view :breadcrumb="page"></breadcrumb-view>
         <selectForm-view :user="user" :addUrl="'/project/projectdesc'" v-on:onSelectForm="getSelectItem"></selectForm-view>
         <el-row class="projectLists">

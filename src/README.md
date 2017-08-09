@@ -3,7 +3,7 @@
 此文件夹, 用来存放自定义组件/板块, 板块之间存在相互调用. 相互之间监听/共享父组件参数.通过自定义参数! 
     1: 父组件 => 子组件. [父传子, 自定值使用 props 接收]
     如: 
-    <pagination-view :dataUrl="baseUrl + 'bold'" :searchForm="searchForm" :user="user"></pagination-view>
+    <pagination-view :dataUrl="baseUrl + 'blog'" :searchForm="searchForm" :user="user"></pagination-view>
     ---------------------------------------------------------- 父组件
 
     props: {
@@ -21,20 +21,20 @@
     <pagination-view v-on:cbData="getItem"></pagination-view>
     ...
     getItem(_data) {
-        this.bold = _data;
-        // console.log(this.bold);
+        this.blog = _data;
+        // console.log(this.blog);
     }
     ---------------------------------------------------------- 父组件
 
 ```
-例如: [博客列表页](https://github.com/vsery/VsAdmin/blob/master/src/components/bold/bolds.vue) 就调用了 [搜索表单](https://github.com/vsery/VsAdmin/blob/master/src/components/form/selectform.vue) , [分页](https://github.com/vsery/VsAdmin/blob/master/src/components/tool/pagination.vue) . 
+例如: [博客列表页](https://github.com/vsery/VsAdmin/blob/master/src/components/blog/blogs.vue) 就调用了 [搜索表单](https://github.com/vsery/VsAdmin/blob/master/src/components/form/selectform.vue) , [分页](https://github.com/vsery/VsAdmin/blob/master/src/components/tool/pagination.vue) . 
 
 
 # components [组件] 
     文件夹         文件名[组件名]                作用[功能描述]
-    bold/                                       博客
-                bolds.vue                       博客列表
-                bolddesc.vue                    博客详情/添加/编辑博客
+    blog/                                       博客
+                blogs.vue                       博客列表
+                blogdesc.vue                    博客详情/添加/编辑博客
     eCharts/                                    数据图表
     form/                                       表单
                 selectform.vue                  搜索表单

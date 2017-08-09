@@ -56,9 +56,14 @@
         "path": "/",
         "icon": "windows"
     }, {
-        "name": "bold",
+        "name": "page",
+        "text": "页面",
+        "path": "/page/pages",
+        "icon": "page"
+    }, {
+        "name": "blog",
         "text": "博客",
-        "path": "/bold/bolds",
+        "path": "/blog/blogs",
         "icon": "pied-piper"
     }, {
         "name": "project",

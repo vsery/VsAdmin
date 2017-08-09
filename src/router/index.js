@@ -4,8 +4,9 @@ import index from '@/components/index' // 系统管理首页
 import userheader from '@/components/system/userheader' // 用户头像模块
 import userdesc from '@/components/system/userdesc' // 用户信息管理
 import wechatsetting from '@/components/system/wechatsetting' // 用户微信设置
-import bolds from '@/components/bold/bolds' // 博客列表
-import bolddesc from '@/components/bold/bolddesc' // 博客列表
+import page from '@/components/page/pages' // 页面设置
+import blogs from '@/components/blog/blogs' // 博客列表
+import blogdesc from '@/components/blog/blogdesc' // 博客列表
 import projects from '@/components/project/projects' // 项目列表
 import projectdesc from '@/components/project/projectdesc' // 项目详情
 import musics from '@/components/music/musics' // 音乐列表
@@ -28,13 +29,17 @@ export default new router({
 		name: '微信设置',
 		component: wechatsetting
 	}, {
-		path: '/bold/bolds',
+        path: '/page/pages',
+        name: '博文列表',
+        component: blogs
+    }, {
+		path: '/blog/blogs',
 		name: '博文列表',
-		component: bolds
+		component: blogs
 	}, {
-		path: '/bold/bolddesc/',
+		path: '/blog/blogdesc/',
 		name: '博文详情',
-		component: bolddesc
+		component: blogdesc
 	}, {
 		path: '/project/projects',
 		name: '项目列表',

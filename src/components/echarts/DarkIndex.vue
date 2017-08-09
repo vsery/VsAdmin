@@ -30,7 +30,7 @@ export default {
                 },
                 axisLabel: { // 坐标轴小标记
                     textStyle: { // 属性lineStyle控制线条样式
-                        fontWeight: 'bolder',
+                        fontWeight: 'bloger',
                         color: '#fff',
                         shadowColor: '#fff', //默认透明
                         shadowBlur: 10
@@ -62,7 +62,7 @@ export default {
                     offsetCenter: [0, '+100%'], // x, y，单位px
                     textStyle: {
                         color: 'rgba(255,255,255, .6)',
-                        fontWeight: 'bolder',
+                        fontWeight: 'bloger',
                         fontStyle: 'italic',
                         fontSize: 20
                     }
@@ -75,7 +75,7 @@ export default {
                     shadowBlur: 1,
                     offsetCenter: [0, '50%'], // x, y，单位px
                     textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-                        fontWeight: 'bolder',
+                        fontWeight: 'bloger',
                         fontSize: 20,
                         color: 'rgba(30,144,255,0.7)'
                     }
@@ -107,7 +107,7 @@ export default {
                 },
                 axisLabel: { // 坐标轴小标记
                     textStyle: { // 属性lineStyle控制线条样式
-                        fontWeight: 'bolder',
+                        fontWeight: 'bloger',
                         color: '#fff',
                         shadowColor: '#fff', //默认透明
                         shadowBlur: 10
@@ -138,7 +138,7 @@ export default {
                 title: {
                     offsetCenter: [0, '-120%'], // x, y，单位px
                     textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-                        fontWeight: 'bolder',
+                        fontWeight: 'bloger',
                         fontStyle: 'italic',
                         color: 'rgba(255,255,255,.6)',
                         shadowColor: '#fff', //默认透明
@@ -154,7 +154,7 @@ export default {
                     height: 30,
                     offsetCenter: [25, '20%'], // x, y，单位px
                     textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-                        fontWeight: 'bolder',
+                        fontWeight: 'bloger',
                         fontSize: 8,
                         color: '#fff'
                     }
@@ -195,7 +195,7 @@ export default {
                 },
                 axisLabel: {
                     textStyle: { // 属性lineStyle控制线条样式
-                        fontWeight: 'bolder',
+                        fontWeight: 'bloger',
                         color: '#fff',
                         shadowColor: '#fff', //默认透明
                         shadowBlur: 10
@@ -218,7 +218,7 @@ export default {
                 title: {
                     offsetCenter: [0, '-140%'], // x, y，单位px
                     textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-                        fontWeight: 'bolder',
+                        fontWeight: 'bloger',
                         fontStyle: 'italic',
                         color: 'rgba(255,255,255,.6)',
                         shadowColor: '#fff', //默认透明
@@ -259,7 +259,7 @@ export default {
                 },
                 axisLabel: {
                     textStyle: { // 属性lineStyle控制线条样式
-                        fontWeight: 'bolder',
+                        fontWeight: 'bloger',
                         color: '#fff',
                         shadowColor: '#fff', //默认透明
                         shadowBlur: 10
@@ -282,7 +282,7 @@ export default {
                 title: {
                     offsetCenter: [0, '+140%'], // x, y，单位px
                     textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-                        fontWeight: 'bolder',
+                        fontWeight: 'bloger',
                         fontStyle: 'italic',
                         color: 'rgba(255,255,255,.6)',
                         shadowColor: '#fff', //默认透明

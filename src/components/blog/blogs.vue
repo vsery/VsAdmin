@@ -1,12 +1,12 @@
 <template>
-    <div id="bold">
+    <div id="blog">
         <breadcrumb-view :breadcrumb="page"></breadcrumb-view>
-        <selectForm-view :user="user" :addUrl="'/bold/bolddesc'" v-on:onSelectForm="getSelectItem"></selectForm-view>
-        <el-collapse accordion class="boldLists">
-            <el-collapse-item v-for="bs in bold" :key="bs.id">
+        <selectForm-view :user="user" :addUrl="'/blog/blogdesc'" v-on:onSelectForm="getSelectItem"></selectForm-view>
+        <el-collapse accordion class="blogLists">
+            <el-collapse-item v-for="bs in blog" :key="bs.id">
                 <template slot="title">
                     {{bs.title}}
-                    <router-link class="el-button-default min" :to="{ path: '/bold/bolddesc', query: { id: bs.id }}" :title="['浏览\t']+[bs.title]" :user="user"><i class="header-icon fa fa-fw fa-paper-plane"></i></router-link>
+                    <router-link class="el-button-default min" :to="{ path: '/blog/blogdesc', query: { id: bs.id }}" :title="['浏览\t']+[bs.title]" :user="user"><i class="header-icon fa fa-fw fa-paper-plane"></i></router-link>
                     <span class="time f-right">
             <i class="fa fa-fw fa-fire" v-if="bs.fire" title="热门"></i>
             <i class="fa fa-fw fa-filter" v-if="bs.top" title="顶置"></i>
@@ -38,9 +38,9 @@
                     </ul>
                 </div>
             </el-collapse-item>
-            <div class="prompt" v-if="bold.length==0">暂无数据</div>
+            <div class="prompt" v-if="blog.length==0">暂无数据</div>
         </el-collapse>
-        <pagination-view ref="ap" v-on:cbData="getItem" :dataUrl="baseUrl + 'bold'" :searchForm="searchForm" :user="user" :action="'blod'"></pagination-view>
+        <pagination-view ref="ap" v-on:cbData="getItem" :dataUrl="baseUrl + 'blog'" :searchForm="searchForm" :user="user" :action="'blod'"></pagination-view>
     </div>
 </template>
 <script>
@@ -48,7 +48,7 @@ import breadcrumb from '@/components/tool/breadcrumb' // 面包屑
 import selectForm from '@/components/form/selectArticleForm' // 表单/文章搜索
 import pagination from '@/components/tool/pagination' // 分页控件
 export default {
-    name: 'bold',
+    name: 'blog',
     data() {
         return {
             page: [{
@@ -58,7 +58,7 @@ export default {
                 path: '',
                 text: this.$route.name
             }],
-            bold: [],
+            blog: [],
             searchForm: null
         }
     },
@@ -87,8 +87,8 @@ export default {
          * @return {[function]}       [ 更新 dom ]
          */
         getItem(_data) {
-            this.bold = _data;
-            // console.log(this.bold);
+            this.blog = _data;
+            // console.log(this.blog);
         },
         /**
          * [handleChange 手风琴]

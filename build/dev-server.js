@@ -207,14 +207,14 @@ apiRoutes.get('/systemMenu', function(req, res) {
 /**
  * [博客列表 叔据]
  * @param  {[type]} req     [参数]
- * @param  {[type]} res)    { if (boldListData.length == 0 [ JSON/数据库 中没有数据 ]
+ * @param  {[type]} res)    { if (blogListData.length == 0 [ JSON/数据库 中没有数据 ]
  * @param  {Array}  newData [ 匹配条件后的新数据 ]
  * @param  {Array}  current [ 分页后, 当前数据 ]
  * @return {[type]}         [ 返回 数据 ]
  */
-apiRoutes.get('/bold', function(req, res) {
+apiRoutes.get('/blog', function(req, res) {
     try {
-        var fd = fs.openSync('./static/database/bold.json', 'r+'),
+        var fd = fs.openSync('./static/database/blog.json', 'r+'),
             tempData = openData(fd),
             newData = [],
             current = [];
@@ -257,12 +257,12 @@ apiRoutes.get('/bold', function(req, res) {
  * @param  {[type]} res) [ 匹配返回博文 ]
  * @return {[type]}      [ 不匹配返回提示信息 ]
  */
-apiRoutes.get('/boldID', function(req, res) {
+apiRoutes.get('/blogID', function(req, res) {
     try {
-        var fd = fs.openSync('./static/database/bold.json', 'r+');
+        var fd = fs.openSync('./static/database/blog.json', 'r+');
         var tempData = openData(fd);
         for (var i = 0; i < tempData.length; i++) {
-            if (req.query.boldID == tempData[i].id) {
+            if (req.query.blogID == tempData[i].id) {
                 var _callback = tempData[i];
                 (i == 0 ? _callback.prevID = -1 : _callback.prevID = tempData[i - 1].id);
                 (i == (tempData.length - 1) ? _callback.nextID = -1 : _callback.nextID = tempData[i + 1].id);
@@ -283,21 +283,21 @@ apiRoutes.get('/boldID', function(req, res) {
  * @param  {[type]} res 
  * @return {[type]}      [ 返回状态,并提示信息 ]
  */
-apiRoutes.post('/boldID', function(req, res) {
+apiRoutes.post('/blogID', function(req, res) {
     try {
-        var fd = fs.openSync('./static/database/bold.json', 'r+');
+        var fd = fs.openSync('./static/database/blog.json', 'r+');
         var tempData = openData(fd);
-        if (req.body.params.bold.id == -1) {
-            req.body.params.bold.NewTime = req.body.params.bold.UpdateTime;
+        if (req.body.params.blog.id == -1) {
+            req.body.params.blog.NewTime = req.body.params.blog.UpdateTime;
             if (tempData.length == 0) {
-                req.body.params.bold.id = 1
+                req.body.params.blog.id = 1
             } else {
-                req.body.params.bold.id = tempData[0].id + 1;
+                req.body.params.blog.id = tempData[0].id + 1;
             }
-            tempData.unshift(req.body.params.bold);
+            tempData.unshift(req.body.params.blog);
         } else {
             for (var i = 0; i < tempData.length; i++) {
-                if (req.body.params.bold.id == tempData[i].id) tempData.splice(i, 1, req.body.params.bold);
+                if (req.body.params.blog.id == tempData[i].id) tempData.splice(i, 1, req.body.params.blog);
             }
         }
         var newData = JSON.stringify(tempData);
@@ -305,7 +305,7 @@ apiRoutes.post('/boldID', function(req, res) {
             if (err) {
                 return res.send({ state: 'ERROR', info: '编辑失败,请联系管理员!' });
             }
-            return res.json({ state: 'SUCCESS', info: '提交成功', data: { id: req.body.params.bold.id } });
+            return res.json({ state: 'SUCCESS', info: '提交成功', data: { id: req.body.params.blog.id } });
         });
     } catch (err) {
         console.log("错误日志: " + err.name + "\n", err.message);

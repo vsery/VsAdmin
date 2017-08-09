@@ -1,5 +1,5 @@
 <template>
-  <div id="bold">
+  <div id="blog">
     <breadcrumb-view :breadcrumb="page"></breadcrumb-view>
     <upFile-view :imgParam="imgParam"></upFile-view>
   </div>

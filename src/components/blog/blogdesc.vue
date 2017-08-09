@@ -1,54 +1,54 @@
 <template>
-    <div id="bold" :class="edit?'edit':''">
+    <div id="blog" :class="edit?'edit':''">
         <breadcrumb-view :breadcrumb="page"></breadcrumb-view>
-        <el-form ref="form" class="bold-box" :model="bold" label-width="80px" v-if="edit">
+        <el-form ref="form" class="blog-box" :model="blog" label-width="80px" v-if="edit">
             <el-form-item label="缩略图">
-                <upFile-view v-on:onImageUrl="getImgUrl" :imgParam="imgParam" :dialogImageUrl="bold.thumbnail"></upFile-view>
+                <upFile-view v-on:onImageUrl="getImgUrl" :imgParam="imgParam" :dialogImageUrl="blog.thumbnail"></upFile-view>
             </el-form-item>
             <el-form-item label="活动名称">
-                <el-input v-model="bold.title" autofocus></el-input>
+                <el-input v-model="blog.title" autofocus></el-input>
             </el-form-item>
             <el-form-item label="关键字">
                 <el-input type="textarea" v-model="keys" class="key"></el-input>
             </el-form-item>
             <el-form-item label="描述">
-                <el-input type="textarea" v-model="bold.desc"></el-input>
+                <el-input type="textarea" v-model="blog.desc"></el-input>
             </el-form-item>
             <el-form-item label="内容" class="EditorBox">
-                <editorBox-view :value="bold.content" v-on:input="getEditor" v-on:ready="newEditor"></editorBox-view>
+                <editorBox-view :value="blog.content" v-on:input="getEditor" v-on:ready="newEditor"></editorBox-view>
             </el-form-item>
             <el-form-item label-width="0" class="EditorBox text-center">
                 <el-button class="el-button-default right" @click="onSubmit()">保持</el-button>
                 <el-button class="el-button-default" @click="onCancel()">取消</el-button>
             </el-form-item>
         </el-form>
-        <div class="bold-box" v-else>
+        <div class="blog-box" v-else>
             <div class="title h3">
-                <i class="fa fa-fw fa-fire" v-if="bold.fire" title="热门"></i>
-                <i class="fa fa-fw fa-filter" v-if="bold.top" title="顶置"></i> {{bold.title}}
+                <i class="fa fa-fw fa-fire" v-if="blog.fire" title="热门"></i>
+                <i class="fa fa-fw fa-filter" v-if="blog.top" title="顶置"></i> {{blog.title}}
                 <div class="f-right">
                     <el-button class="el-button-default right" @click="edit=true">编辑</el-button>
-                    <el-button class="el-button-default" @click="delectBold()">删除</el-button>
+                    <el-button class="el-button-default" @click="delectblog()">删除</el-button>
                 </div>
             </div>
             <div class="second">
-                <span class="time"><i class="fa fa-fw fa-clock-o"></i>{{bold.UpdateTime}}</span>
-                <i class="fa fa-fw fa-key"></i><span class="key" v-for="k in bold.key" title="关键字">{{k}}</span>
+                <span class="time"><i class="fa fa-fw fa-clock-o"></i>{{blog.UpdateTime}}</span>
+                <i class="fa fa-fw fa-key"></i><span class="key" v-for="k in blog.key" title="关键字">{{k}}</span>
             </div>
             <hr/>
             <div class="desc-box">
-                <div class="thumbnail"><img :src="bold.thumbnail" alt=""></div>
-                <div class="desc" v-html="bold.desc"></div>
+                <div class="thumbnail"><img :src="blog.thumbnail" alt=""></div>
+                <div class="desc" v-html="blog.desc"></div>
             </div>
-            <div class="content" v-html="bold.content"></div>
+            <div class="content" v-html="blog.content"></div>
             <div class="foot">
                 <ul class="fun">
-                    <li>阅读: {{bold.eye}}</li>
-                    <li>点赞: {{bold.zan}}</li>
+                    <li>阅读: {{blog.eye}}</li>
+                    <li>点赞: {{blog.zan}}</li>
                 </ul>
                 <div class="f-right">
-                    <el-button class="el-button-default right" @click="onLoading('prev')" :disabled="bold.prevID ==-1?'disabled':null">上一篇</el-button>
-                    <el-button class="el-button-default" @click="onLoading('next')" :disabled="bold.nextID ==-1?'disabled':null">下一篇</el-button>
+                    <el-button class="el-button-default right" @click="onLoading('prev')" :disabled="blog.prevID ==-1?'disabled':null">上一篇</el-button>
+                    <el-button class="el-button-default" @click="onLoading('next')" :disabled="blog.nextID ==-1?'disabled':null">下一篇</el-button>
                 </div>
             </div>
         </div>
@@ -59,22 +59,22 @@ import breadcrumb from '@/components/tool/breadcrumb' // 面包屑
 import upFile from '@/components/tool/upFile' // 上传图片组件
 import editorBox from '@/components/tool/editor' // editor组件
 export default {
-    name: 'bold',
+    name: 'blog',
     data() {
         return {
             page: [{
                 path: '/',
                 text: '首页'
             }, {
-                path: '/bold/bolds',
+                path: '/blog/blogs',
                 text: '博文列表'
             }, {
                 path: '',
                 text: this.$route.name
             }],
-            // boldID: 0,
+            // blogID: 0,
             edit: false,
-            bold: {},
+            blog: {},
             keys: '',
             imgParam: {
                 header: true
@@ -101,16 +101,16 @@ export default {
         onLoading(_type) {
             switch (_type) {
                 case 'prev':
-                    this.$router.push({ path: '/bold/bolddesc', query: { id: this.bold.prevID } });
+                    this.$router.push({ path: '/blog/blogdesc', query: { id: this.blog.prevID } });
                     break;
                 case 'next':
-                    this.$router.push({ path: '/bold/bolddesc', query: { id: this.bold.nextID } });
+                    this.$router.push({ path: '/blog/blogdesc', query: { id: this.blog.nextID } });
                     break;
             }
-            this.bold.id = this.$route.query.id; // -1/0 新建状态
-            if (this.bold.id < 1) {
+            this.blog.id = this.$route.query.id; // -1/0 新建状态
+            if (this.blog.id < 1) {
                 this.edit = true;
-                this.bold.content = "";
+                this.blog.content = "";
             } else {
                 this.getDate();
             }
@@ -120,20 +120,20 @@ export default {
          * @return {[type]} [Object]
          */
         getDate() {
-            this.dataUrl = this.baseUrl + 'boldID';
-            var params = { token: this.user.token, boldID: this.bold.id }
+            this.dataUrl = this.baseUrl + 'blogID';
+            var params = { token: this.user.token, blogID: this.blog.id }
             this.$http.get(this.dataUrl, {
                 params: params
             }).then(res => {
                 var resData = res.data;
                 console.log(resData);
-                this.bold = resData.data;
-                this.bold.content = decodeURIComponent(this.bold.content);
-                this.keys = JSON.stringify(this.bold.key); // 关键字组 字符串化
+                this.blog = resData.data;
+                this.blog.content = decodeURIComponent(this.blog.content);
+                this.keys = JSON.stringify(this.blog.key); // 关键字组 字符串化
                 console.log(this.keys);
-                this.imgParam.imgUrl = this.bold.thumbnail; // 初始化 缩略图
-                localStorage.setItem("oldBold", JSON.stringify({
-                    bold: this.bold,
+                this.imgParam.imgUrl = this.blog.thumbnail; // 初始化 缩略图
+                localStorage.setItem("oldblog", JSON.stringify({
+                    blog: this.blog,
                     keys: this.keys,
                     imgUrl: this.imgParam.imgUrl
                 }));
@@ -142,7 +142,7 @@ export default {
         /* 获取缩略图 */
         getImgUrl(_img) {
             // console.log(_img);
-            this.bold.thumbnail = _img;
+            this.blog.thumbnail = _img;
         },
         /* 新建编辑器,返回实例 */
         newEditor(_editor) {
@@ -152,11 +152,11 @@ export default {
         /* 获取编辑器内容值 */
         getEditor(_editor) {
             this.editor = _editor;
-            this.bold.content = this.editor.content;
+            this.blog.content = this.editor.content;
             // console.log(this.editor);
         },
         /* 删除博文 */
-        delectBold() {
+        delectblog() {
             // alert('> delect this ...');
             this.$confirm('您是否确定删除所选内容?', '确认操作', {
                 cancelButtonText: '取消',
@@ -180,18 +180,18 @@ export default {
         /* 提交编辑 */
         onSubmit() {
             var _d = new Date();
-            this.bold.UpdateTime = _d.getFullYear() + '-' + _d.getMonth() + 1 + '-' + _d.getDate() + ' ' + _d.getHours() + ':' + _d.getMinutes() + ':' + _d.getSeconds();
-            this.bold.key = JSON.parse(this.keys);
-            this.bold.content = encodeURIComponent(this.bold.content);
-            console.log(this.bold);
-            this.$http.post(this.baseUrl + 'boldID', {
+            this.blog.UpdateTime = _d.getFullYear() + '-' + _d.getMonth() + 1 + '-' + _d.getDate() + ' ' + _d.getHours() + ':' + _d.getMinutes() + ':' + _d.getSeconds();
+            this.blog.key = JSON.parse(this.keys);
+            this.blog.content = encodeURIComponent(this.blog.content);
+            console.log(this.blog);
+            this.$http.post(this.baseUrl + 'blogID', {
                 params: {
                     token: this.user.token,
-                    bold: this.bold
+                    blog: this.blog
                 }
             }).then(res => {
                 var resData = res.data;
-                this.$router.push({ path: '/bold/bolddesc', query: { id: resData.data.id } });
+                this.$router.push({ path: '/blog/blogdesc', query: { id: resData.data.id } });
                 this.edit = false;
                 this.onLoading();
                 this.$notify({
@@ -204,8 +204,8 @@ export default {
         },
         /* 取消编辑 */
         onCancel() {
-            if (this.bold.id < 1) {
-                this.$router.push('bolds')
+            if (this.blog.id < 1) {
+                this.$router.push('blogs')
             } else {
                 this.$confirm('您是否确定放弃编辑此内容?', '确认操作', {
                     cancelButtonText: '取消',
@@ -213,8 +213,8 @@ export default {
                     type: 'warning'
                 }).then(() => {
                     this.edit = false;
-                    var temp = JSON.parse(localStorage.getItem('oldBold'));
-                    this.bold = temp.bold;
+                    var temp = JSON.parse(localStorage.getItem('oldblog'));
+                    this.blog = temp.blog;
                     this.keys = temp.keys;
                     this.imgParam.imgUrl = temp.imgUrl;
                     this.$notify({

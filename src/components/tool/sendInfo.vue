@@ -18,7 +18,7 @@
 <script>
 import editorBox from '@/components/tool/editor' // editor组件
 export default {
-    name: 'bold',
+    name: 'blog',
     data() {
         return {
             form: {
