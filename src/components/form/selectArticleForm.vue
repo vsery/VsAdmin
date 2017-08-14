@@ -92,7 +92,21 @@ export default {
                 params: params
             }).then(res => {
                 var resData = res.data;
-                this.restTitleItems = resData;
+                console.log(resData);
+                this.restTitleItems = resData.data;
+            });
+        },
+        /* 获取建议文章标题列表数据 */
+        addArticleTitle() {
+            this.menuUrl = this.baseUrl + 'articleTitle';
+            var params = {
+                'token': this.user.token,
+                'value': this.selectForm.title
+            }
+            this.$http.post(this.menuUrl, {
+                params: params
+            }).then(res => {
+                var resData = res.data;
             });
         },
         /* 获取数据关键字列表数据 */
@@ -105,7 +119,20 @@ export default {
                 params: params
             }).then(res => {
                 var resData = res.data;
-                this.restKeyItems = resData;
+                this.restKeyItems = resData.data;
+            });
+        },
+        /* 获取建议文章标题列表数据 */
+        addKeyWord() {
+            this.menuUrl = this.baseUrl + 'keyWord';
+            var params = {
+                'token': this.user.token,
+                'value': this.selectForm.key
+            }
+            this.$http.post(this.menuUrl, {
+                params: params
+            }).then(res => {
+                var resData = res.data;
             });
         },
         /* 打开高级搜素 */
@@ -138,6 +165,32 @@ export default {
         },
         /* 提交搜素 */
         onSelect() {
+            var flagTitle = true;
+            if (this.selectForm.title!='') {
+                for (var i = 0; i < this.restTitleItems.length; i++) {
+                    if(this.selectForm.title == this.restTitleItems[0].value){
+                        flagTitle =false;
+                        break;
+                    }
+                }
+                if (flagTitle) {
+                    console.log(this.selectForm.title);
+                    this.addArticleTitle();
+                }
+            }
+            var flagKey = true;
+            if (this.selectForm.title!='') {
+                for (var i = 0; i < this.restTitleItems.length; i++) {
+                    if(this.selectForm.title == this.restTitleItems[0].value){
+                        flagKey =false;
+                        break;
+                    }
+                }
+                if (flagKey) {
+                    console.log(this.selectForm.title);
+                    this.addArticleTitle();
+                }
+            }
             /* 自定义事件, 传递当前表单 */
             if (this.selectForm.senior == false && this.selectForm.title == '') {
                 this.$emit('onSelectForm', null);

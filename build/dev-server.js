@@ -5,8 +5,8 @@ if (!process.env.NODE_ENV) {
     process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
 }
 
-var opn = require('opn')
-var path = require('path')
+var opn = require('opn');
+var path = require('path');
 var express = require('express');
 var webpack = require('webpack');
 var proxyMiddleware = require('http-proxy-middleware');
@@ -35,11 +35,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // for parsing application/json 用于解析应用程序/ JSON
 app.use(bodyParser.json());
-
-var articleTitle = require('../static/database/articleTitle.json'); // 文章标题, 检索列表数据
-var articleTitle = articleTitle.articleTitle;
-var keyData = require('../static/database/key.json'); // 关键字, 检索列表数据
-var keyWord = keyData.keyWord;
 // var musicData = require('../static/database/music.json'); // 音乐列表
 // var music = musicData.musicList;
 var mapChina = require('../static/database/china.json'); // 中国地图数据
@@ -353,7 +348,7 @@ apiRoutes.get('/project', function(req, res) {
         fs.close(fd);
     }
 });
-
+// 获取音乐列表
 apiRoutes.get('/music', function(req, res) {
     // res.json({ state: "SUCCESS", data: music, total: music.length });
     try {
@@ -397,12 +392,75 @@ apiRoutes.get('/music', function(req, res) {
     }
 });
 
+// 文章标题, 检索列表数据
 apiRoutes.get('/articleTitle', function(req, res) {
-    res.json(articleTitle);
+    try {
+        var fd = fs.openSync('./static/database/articleTitle.json', 'r+');
+        var newData = openData(fd);
+        return res.json({ state: 'SUCCESS', data: newData });
+    } catch (err) {
+        console.log("错误日志: " + err.name + "\n", err.message);
+    } finally {
+        fs.close(fd);
+    }
+});
+// 添加检索文章标题
+apiRoutes.post('/articleTitle', function(req, res) {
+    try {
+        var fd = fs.openSync('./static/database/articleTitle.json', 'r+');
+        var tempArr = openData(fd);
+        var tempObj = {
+            'value': req.body.params.value
+        }
+        tempArr.push(tempObj);
+        var newData = JSON.stringify(tempArr);
+        fs.writeFile(fd, newData, function(err) {
+            if (err) {
+                return res.send({ state: 'ERROR', info: '编辑失败,请联系管理员!' });
+            }
+            return res.json({ state: 'SUCCESS', info: '提交成功', data: req.body.params.value });
+        });
+    } catch (err) {
+        console.log("错误日志: " + err.name + "\n", err.message);
+    } finally {
+        fs.close(fd);
+    }
 });
 
+// 关键字, 检索列表数据
 apiRoutes.get('/keyWord', function(req, res) {
-    res.json(keyWord);
+    try {
+        var fd = fs.openSync('./static/database/keyWord.json', 'r+');
+        var newData = openData(fd);
+        return res.json({ state: 'SUCCESS', data: newData });
+    } catch (err) {
+        console.log("错误日志: " + err.name + "\n", err.message);
+    } finally {
+        fs.close(fd);
+    }
+});
+// 添加检索关键字
+apiRoutes.post('/keyWord', function(req, res) {
+    try {
+        var fd = fs.openSync('./static/database/keyWord.json', 'r+');
+        var tempArr = openData(fd);
+        var tempObj = {
+            'value': req.body.params.value
+        }
+        // console.log(tempArr);
+        tempArr.push(tempObj);
+        var newData = JSON.stringify(tempArr);
+        fs.writeFile(fd, newData, function(err) {
+            if (err) {
+                return res.send({ state: 'ERROR', info: '编辑失败,请联系管理员!' });
+            }
+            return res.json({ state: 'SUCCESS', info: '提交成功', data: req.body.params.value });
+        });
+    } catch (err) {
+        console.log("错误日志: " + err.name + "\n", err.message);
+    } finally {
+        fs.close(fd);
+    }
 });
 
 apiRoutes.get('/china', function(req, res) {

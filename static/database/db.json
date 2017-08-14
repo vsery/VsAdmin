@@ -109,7 +109,7 @@
         "name": "tool",
         "text": "工具",
         "path": "/tool/tools",
-        "icon": "tool"
+        "icon": "wrench"
     }],
     "error": {
         "static": "200",
