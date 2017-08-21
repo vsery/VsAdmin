@@ -10,6 +10,7 @@ import blogdesc from '@/components/blog/blogdesc' // 博客列表
 import projects from '@/components/project/projects' // 项目列表
 import projectdesc from '@/components/project/projectdesc' // 项目详情
 import musics from '@/components/music/musics' // 音乐列表
+import links from '@/components/link/links' // 音乐列表
 vue.use(router)
 export default new router({
 	routes: [{
@@ -49,8 +50,12 @@ export default new router({
 		name: '项目详情',
 		component: projectdesc
 	}, {
-		path: '/music/musics',
-		name: '音乐列表',
-		component: musics
-	}]
+        path: '/music/musics',
+        name: '音乐列表',
+        component: musics
+    }, {
+        path: '/link/links',
+        name: '友情链接',
+        component: links
+    }]
 })

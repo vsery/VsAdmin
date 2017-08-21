@@ -73,10 +73,13 @@ export default {
                         case 'music':
                             callback.push(resData.data[i]);
                             break;
+                        case 'link':
+                            callback.push(resData.data[i]);
+                            break;
                     }
                 }
                 this.$emit('cbData', callback);
-                // console.log(callback);
+                console.log(callback);
             });
         },
         /* 每页显示几条数据 */

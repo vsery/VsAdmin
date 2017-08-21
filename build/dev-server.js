@@ -463,6 +463,50 @@ apiRoutes.post('/keyWord', function(req, res) {
     }
 });
 
+var links = require('../static/database/link.json');
+apiRoutes.get('/link', function(req, res) {
+    // res.json(links);
+    try {
+        var fd = fs.openSync('./static/database/link.json', 'r+'),
+            tempData = openData(fd),
+            newData = [],
+            current = [];
+        for (var i = 0; i < tempData.length; i++) {
+            if (req.query.searchForm == null || req.query.searchForm == '' || req.query.searchForm == undefined) {
+                newData.push(tempData[i]);
+            } else {
+                var searchForm = JSON.parse(req.query.searchForm);
+                if (!searchForm.senior) {
+                    if (tempData[i].title.indexOf(searchForm.title) >= 0) newData.push(tempData[i]);
+                } else {
+                    var temp = true;
+                    if (searchForm.title != '' && tempData[i].title.indexOf(searchForm.title) < 0) temp = false;
+                    if (searchForm.key != '' && tempData[i].key.indexOf(searchForm.key) < 0) temp = false;
+                    if (searchForm.date.length != 0 && (new Date(tempData[i].UpdateTime) <= new Date(searchForm.date[0]) || new Date(tempData[i].UpdateTime) >= new Date(searchForm.date[1]))) temp = false;
+                    if (searchForm.type.length == 1) {
+                        if (searchForm.type[0] == '顶置' && !tempData[i].top) temp = false;
+                        if ((searchForm.type[0] == '热评' || searchForm.type[1] == '热评') && !tempData[i].fire) temp = false;
+                    } else if (searchForm.type.length == 2) {
+                        if (!tempData[i].top || !tempData[i].fire) temp = false;
+                    }
+                    if (temp) newData.push(tempData[i]);
+                }
+            }
+        }
+        if (req.query.player) {
+            return res.json({ state: 'SUCCESS', data: tempData, total: tempData.length });
+        }
+        for (var i = (req.query.page - 1) * req.query.size; i < req.query.page * req.query.size && i < newData.length; i++) {
+            current.push(newData[i]);
+        }
+        return res.json({ state: 'SUCCESS', data: current, total: newData.length });
+    } catch (err) {
+        console.log("错误日志: " + err.name + "\n", err.message);
+    } finally {
+        fs.close(fd);
+    }
+});
+
 apiRoutes.get('/china', function(req, res) {
     res.json(mapChina);
 });
