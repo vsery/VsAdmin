@@ -48,20 +48,21 @@ export default {
         },
         /* 显示上传 */
         beforeAvatarUpload(file) {
-            const isJPG = file.type === 'image/jpeg';
-            var isLt2M;
-            if (this.imgParam.imgSize > 0) {
-                isLt2M = file.size / 1024 / 1024 < this.imgParam.imgSize;
-            } else {
-                isLt2M = file.size / 1024 / 1024 < 2;
-            }
-            if (!isJPG) {
-                this.$message.error('上传头像图片只能是 JPG 格式!');
-            }
-            if (!isLt2M) {
-                this.$message.error('上传头像图片大小不能超过 ' + (this.imgParam.imgSize > 0 ? '2' : this.imgParam.imgSize) + 'MB!');
-            }
-            return isJPG && isLt2M;
+            console.log(file);
+            // const isJPG = file.type === 'image/jpeg';
+            // var isLt2M;
+            // if (this.imgParam.imgSize > 0) {
+            //     isLt2M = file.size / 1024 / 1024 < this.imgParam.imgSize;
+            // } else {
+            //     isLt2M = file.size / 1024 / 1024 < 2;
+            // }
+            // if (!isJPG) {
+            //     this.$message.error('上传头像图片只能是 JPG 格式!');
+            // }
+            // if (!isLt2M) {
+            //     this.$message.error('上传头像图片大小不能超过 ' + (this.imgParam.imgSize > 0 ? '2' : this.imgParam.imgSize) + 'MB!');
+            // }
+            // return isJPG && isLt2M;
         }
     }
 }

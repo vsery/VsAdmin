@@ -165,6 +165,7 @@ export default {
         },
         /* 提交搜素 */
         onSelect() {
+            console.log(this.selectForm);
             var flagTitle = true;
             if (this.selectForm.title!='') {
                 for (var i = 0; i < this.restTitleItems.length; i++) {

@@ -139,6 +139,7 @@ export default {
                 this.musicList = resData.data;
                 this.audio = document.getElementById('audioMusic');
                 this.music.type = this.type[0];
+                console.log(typeof(resData.data[0].src));
                 this.musicRandom();
                 this.palyGoOn();
             });
