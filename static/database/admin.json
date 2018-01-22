@@ -1,11 +1,1 @@
-[{
-	"token": "bD3@hD4@gC2|rB4?cJ1#lB1`bB7@qC4{fI2;bD7~tE2?dB2%nU2$fD6ebN1@",
-	"type": "administrator",
-	"name": "admin",
-	"password": "admin",
-	"passwordconfirm": "admin",
-	"mobile": "18075177451",
-	"avatar": "static\\images\\header\\image_haeder.jpg",
-	"avatarID": 2001,
-	"nickname": "Everyone is no.1"
-}]
+[{"token":"bB2|lM6~jG6_bB4@kJ3#nO1^bD1}lP3^oH2_dB1#eD5@fS1#eO2%bB3&cE3|","type":"administrator","name":"qwer","password":"qwer","passwordconfirm":"qwer","mobile":"qwer","avatar":"static\\uploads\\image\\image-1512389039070.jpg","avatarID":2002,"nickname":"qwer"},{"token":"bD3@hD4@gC2|rB4?cJ1#lB1`bB7@qC4{fI2;bD7~tE2?dB2%nU2$fD6ebN1@","type":"administrator","name":"admin","password":"admin","passwordconfirm":"admin","mobile":"18075177451","avatar":"static\\images\\header\\image_haeder.jpg","avatarID":2001,"nickname":"Everyone is no.1"}]
